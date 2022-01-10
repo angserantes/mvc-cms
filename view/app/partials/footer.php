@@ -3,7 +3,7 @@
         <footer class="center-align">
             © <?php echo date("Y") ?>
             <a href="#" target="_blank" title="Programa emprego formaweb">
-                Jairo García Rincón
+                FormawebIV
             </a>
         </footer>
 
