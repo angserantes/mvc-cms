@@ -61,6 +61,10 @@ INSERT INTO usuarios VALUES
 
 9. Resultado final:
 
-![](https://i.ibb.co/W6W8bMv/Fire-Shot-Capture-001-Noticias-de-Harry-Potter-mvc-test.png)
+![Inicio](https://i.ibb.co/rbjQV4Y/Fire-Shot-Capture-003-Noticias-de-Harry-Potter-mvc-test.png)
 
-![](https://i.ibb.co/WKvH21v/Fire-Shot-Capture-002-Noticias-de-Harry-Potter-mvc-test.png)
+![Noticias](https://i.ibb.co/M5JL2Pq/Fire-Shot-Capture-005-Noticias-de-Harry-Potter-mvc-test.png)
+
+![Acerca-de](https://i.ibb.co/tLRrKNy/Fire-Shot-Capture-007-Noticias-de-Harry-Potter-mvc-test.png)
+
+![Admin](https://i.ibb.co/LYfGSvF/Fire-Shot-Capture-008-Panel-de-administraci-n-mvc-test.png")
