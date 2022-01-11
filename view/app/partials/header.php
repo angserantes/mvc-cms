@@ -35,6 +35,9 @@
                         <a href="<?php echo $_SESSION['home'] ?>acerca-de" title="Acerca de">Acerca de</a>
                     </li>
                     <li>
+                        <a href="<?php echo $_SESSION['home'] ?>contacto" title="Contacto">Contacto</a>
+                    </li>
+                    <li>
                         <a href="<?php echo $_SESSION['home'] ?>admin" title="Panel de administración"
                            target="_blank" class="grey-text">
                             Admin
@@ -56,6 +59,9 @@
             <li>
                 <a href="<?php echo $_SESSION['home'] ?>acerca-de" title="Acerca de">Acerca de</a>
             </li>
+            <li>
+                        <a href="<?php echo $_SESSION['home'] ?>contacto" title="Contacto">Contacto</a>
+                    </li>
             <li>
                 <a href="<?php echo $_SESSION['home'] ?>admin" title="Panel de administración"
                    target="_blank" class="grey-text">

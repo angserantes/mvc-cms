@@ -72,3 +72,13 @@ INSERT INTO usuarios VALUES
 Añadimos una nueva noticia llamada Dobby:
 
 ![Dobby](https://i.ibb.co/6Dz49nD/Fire-Shot-Capture-009-Noticias-de-Harry-Potter-mvc-test.png")
+
+10. Creamos una página nueva de contacto: añadimos un nuevo archivo llamado contacto.php en el directorio app. Se modifica el header.php añadiendo  un li de contacto. Despúés en el AppController creamos una función nueva de la siguiente forma: 
+    1.  public function contacto(){
+
+        //Llamo a la vista
+        $this->view->vista("app", "contacto");
+    2. en index.php de la carpeta public en la parte del front-end añadimos lo siguiente:
+           case "contacto":
+        controller()->contacto();
+        break;

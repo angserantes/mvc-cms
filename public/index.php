@@ -1,32 +1,32 @@
 <?php
 namespace App;
-
+ 
 //Inicializo sesión para poder traspasar variables entre páginas
 session_start();
-
-//Incluyo los controladores que voy a utilizar para que seran cargados por Autoload
+ 
+//Incluyo los controlleres que voy a utilizar para que seran cargados por Autoload
 use App\Controller\AppController;
 use App\Controller\NoticiaController;
 use App\Controller\UsuarioController;
-
+ 
 /*
  * Asigno a sesión las rutas de las carpetas public y home, necesarias tanto para las rutas como para
  * poder enlazar imágenes y archivos css, js
  */
 $_SESSION['public'] = '/';
 $_SESSION['home'] = $_SESSION['public'].'index.php/';
-
+ 
 //Defino y llamo a la función que autocargará las clases cuando se instancien
 spl_autoload_register('App\autoload');
-
+ 
 function autoload($clase,$dir=null){
-
+ 
     //Directorio raíz de mi proyecto
     if (is_null($dir)){
-         $dirname = str_replace('\public', '', dirname(__FILE__));
+        $dirname = str_replace('\public', '', dirname(__FILE__));
         $dir = realpath($dirname);
     }
-
+ 
     //Escaneo en busca de la clase de forma recursiva
     foreach (scandir($dir) as $file){
         //Si es un directorio (y no es de sistema) accedo y
@@ -39,88 +39,91 @@ function autoload($clase,$dir=null){
             require($dir."/".$file);
         }
     }
-
+ 
 }
-
-//Para invocar al controlador en cada ruta
-function controlador($nombre=null){
-
+ 
+//Para invocar al controller en cada ruta
+function controller($nombre=null){
+ 
     switch($nombre){
         default: return new AppController;
         case "noticias": return new NoticiaController;
         case "usuarios": return new UsuarioController;
     }
-
+ 
 }
-
+ 
 //Quito la ruta de la home a la que me están pidiendo
 $ruta = str_replace($_SESSION['home'], '', $_SERVER['REQUEST_URI']);
-
-//Encamino cada ruta al controlador y acción correspondientes
+ 
+//Encamino cada ruta al controller y acción correspondientes
 switch ($ruta){
-
+ 
     //Front-end
     case "":
-    case "/":
-        controlador()->index();
+    case "":
+        controller()->index();
         break;
     case "acerca-de":
-        controlador()->acercade();
+        controller()->acercade();
+        break;
+    case "contacto":
+        controller()->contacto();
         break;
     case "noticias":
-        controlador()->noticias();
+        controller()->noticias();
         break;
     case (strpos($ruta,"noticia/") === 0):
-        controlador()->noticia(str_replace("noticia/","",$ruta));
+        controller()->noticia(str_replace("noticia/","",$ruta));
         break;
-
+ 
     //Back-end
     case "admin":
     case "admin/entrar":
-        controlador("usuarios")->entrar();
+        controller("usuarios")->entrar();
         break;
     case "admin/salir":
-        controlador("usuarios")->salir();
+        controller("usuarios")->salir();
         break;
     case "admin/usuarios":
-        controlador("usuarios")->index();
+        controller("usuarios")->index();
         break;
     case "admin/usuarios/crear":
-        controlador("usuarios")->crear();
+        controller("usuarios")->crear();
         break;
     case (strpos($ruta,"admin/usuarios/editar/") === 0):
-        controlador("usuarios")->editar(str_replace("admin/usuarios/editar/","",$ruta));
+        controller("usuarios")->editar(str_replace("admin/usuarios/editar/","",$ruta));
         break;
     case (strpos($ruta,"admin/usuarios/activar/") === 0):
-        controlador("usuarios")->activar(str_replace("admin/usuarios/activar/","",$ruta));
+        controller("usuarios")->activar(str_replace("admin/usuarios/activar/","",$ruta));
         break;
     case (strpos($ruta,"admin/usuarios/borrar/") === 0):
-        controlador("usuarios")->borrar(str_replace("admin/usuarios/borrar/","",$ruta));
+        controller("usuarios")->borrar(str_replace("admin/usuarios/borrar/","",$ruta));
         break;
     case "admin/noticias":
-        controlador("noticias")->index();
+        controller("noticias")->index();
         break;
     case "admin/noticias/crear":
-        controlador("noticias")->crear();
+        controller("noticias")->crear();
         break;
     case (strpos($ruta,"admin/noticias/editar/") === 0):
-        controlador("noticias")->editar(str_replace("admin/noticias/editar/","",$ruta));
+        controller("noticias")->editar(str_replace("admin/noticias/editar/","",$ruta));
         break;
     case (strpos($ruta,"admin/noticias/activar/") === 0):
-        controlador("noticias")->activar(str_replace("admin/noticias/activar/","",$ruta));
+        controller("noticias")->activar(str_replace("admin/noticias/activar/","",$ruta));
         break;
     case (strpos($ruta,"admin/noticias/home/") === 0):
-        controlador("noticias")->home(str_replace("admin/noticias/home/","",$ruta));
+        controller("noticias")->home(str_replace("admin/noticias/home/","",$ruta));
         break;
     case (strpos($ruta,"admin/noticias/borrar/") === 0):
-        controlador("noticias")->borrar(str_replace("admin/noticias/borrar/","",$ruta));
+        controller("noticias")->borrar(str_replace("admin/noticias/borrar/","",$ruta));
         break;
     case (strpos($ruta,"admin/") === 0):
-        controlador("usuarios")->entrar();
+        controller("usuarios")->entrar();
         break;
-
+ 
     //Resto de rutas
     default:
-        controlador()->index();
-// ese index es el mismo index de public
-} 
+        controller()->index();
+ 
+}

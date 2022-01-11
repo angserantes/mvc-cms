@@ -44,6 +44,12 @@ class AppController
 
     }
 
+    public function contacto(){
+
+        //Llamo a la vista
+        $this->view->vista("app", "contacto");
+
+    }
     public function noticias(){
 
         //Consulta a la bbdd
