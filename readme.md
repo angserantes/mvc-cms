@@ -56,3 +56,6 @@ INSERT INTO usuarios VALUES
     (3,"operador2","$2y$12$mUjET9dsw5b0gGL2J4iL8Oo3PyOjJL3AHzefJwZ3Y3u6w.HUm/S8O?>
 ",null,0,0,1)
 ;
+
+
+![](https://i.ibb.co/W6W8bMv/Fire-Shot-Capture-001-Noticias-de-Harry-Potter-mvc-test.png)
