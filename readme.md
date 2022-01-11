@@ -13,7 +13,7 @@
 3. Generamos base de datos de hogwarts
 4. Creamos la tabla de usuarios y noticias llamando a la base de datos
 USE db_hogwarts;
-creamos tabla de usuarios:
+5. creamos tabla de usuarios:
 
 CREATE TABLE `usuarios` (
   `id` int(3) NOT NULL AUTO_INCREMENT,
@@ -28,7 +28,7 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-creamos la tabla para noticias:
+6. creamos la tabla para noticias:
 
 USE db_hogwarts;
 CREATE TABLE `noticias` (
@@ -47,7 +47,7 @@ CREATE TABLE `noticias` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
-5. Contraseñas encriptadas, obtener-hash.php
+7. Contraseñas encriptadas, obtener-hash.php
 
 USE db_hogwarts;
 INSERT INTO usuarios VALUES
@@ -56,3 +56,7 @@ INSERT INTO usuarios VALUES
     (3,"operador2","$2y$12$mUjET9dsw5b0gGL2J4iL8Oo3PyOjJL3AHzefJwZ3Y3u6w.HUm/S8O?>
 ",null,0,0,1)
 ;
+
+8. Completamos los archivos
+
+9. Resultado final:
