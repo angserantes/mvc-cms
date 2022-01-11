@@ -82,3 +82,7 @@ Añadimos una nueva noticia llamada Dobby:
            case "contacto":
         controller()->contacto();
         break;
+
+        Se visualizaría en el navegador de la siguiente forma:
+
+        ![Contacto](https://i.ibb.co/vJHkTPB/Fire-Shot-Capture-010-Noticias-de-Harry-Potter-mvc-test.png)
