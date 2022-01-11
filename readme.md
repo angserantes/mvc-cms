@@ -57,13 +57,10 @@ INSERT INTO usuarios VALUES
 ",null,0,0,1)
 ;
 
-<<<<<<< HEAD
 8. Completamos los archivos
 
 9. Resultado final:
-=======
 
 ![](https://i.ibb.co/W6W8bMv/Fire-Shot-Capture-001-Noticias-de-Harry-Potter-mvc-test.png)
 
 ![](https://i.ibb.co/WKvH21v/Fire-Shot-Capture-002-Noticias-de-Harry-Potter-mvc-test.png)
->>>>>>> 70bec074b6c4d8717dc213949c0664d161da875d
