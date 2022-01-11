@@ -68,3 +68,4 @@ INSERT INTO usuarios VALUES
 ![Acerca-de](https://i.ibb.co/tLRrKNy/Fire-Shot-Capture-007-Noticias-de-Harry-Potter-mvc-test.png)
 
 ![Admin](https://i.ibb.co/LYfGSvF/Fire-Shot-Capture-008-Panel-de-administraci-n-mvc-test.png")
+
