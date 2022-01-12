@@ -57,7 +57,7 @@ INSERT INTO usuarios VALUES
 ",null,0,0,1)
 ;
 
-8. Completamos los archivos
+8. Completamos los archivos de controller, model y public
 
 9. Resultado final:
 
@@ -82,7 +82,7 @@ Añadimos una nueva noticia llamada Dobby:
            case "contacto":
         controller()->contacto();
         break;
-    3. Creamos un formulario de Registro
+    3. Creamos un formulario de Registro con JS
         Se visualizaría en el navegador de la siguiente forma:
 
         ![Contacto](https://i.ibb.co/t4JCs7S/Fire-Shot-Capture-013-Noticias-de-Harry-Potter-mvc-test.png)
