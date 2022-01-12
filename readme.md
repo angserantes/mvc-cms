@@ -82,7 +82,7 @@ Añadimos una nueva noticia llamada Dobby:
            case "contacto":
         controller()->contacto();
         break;
-
+    3. Creamos un formulario de Registro
         Se visualizaría en el navegador de la siguiente forma:
 
-        ![Contacto](https://i.ibb.co/9n5P6rm/Fire-Shot-Capture-012-Noticias-de-Harry-Potter-mvc-test.png)
+        ![Contacto](https://i.ibb.co/t4JCs7S/Fire-Shot-Capture-013-Noticias-de-Harry-Potter-mvc-test.png)
